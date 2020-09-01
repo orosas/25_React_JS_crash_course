@@ -52,14 +52,11 @@ class App extends Component {
 
   // Add Todo
   addTodo = (title) => {
-    const newTodo = {
-      id: uuidv4(),
-      // Nota: En ES6 sí la variable y el nombre del objecto son iguales se puede dejar como la siguiente línea
-      // title: title,
+    axios.post('https://jsonplaceholder.typicode.com/todos', {
       title,
       completed: false
-    }
-    this.setState({ todos: [...this.state.todos, newTodo] })
+    })
+      .then(res => this.setState({ todos: [...this.state.todos, res.data] }));
   }
 
     render() {
