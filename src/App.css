@@ -1,4 +1,6 @@
-.App {
+/* Nota: Código original */
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +37,39 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Nota: Global container */
+.container {
+  padding: 0 1rem;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: #1d94259e;
+  color: #ffffff;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #176c1d9e;
+}
+
