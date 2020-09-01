@@ -1,4 +1,6 @@
+// Nota: Componente que despliega formulario para agregar To Do a la lista
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class AddTodo extends Component {
     
@@ -21,8 +23,6 @@ class AddTodo extends Component {
     onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
     
-
-
     render () {
         return (
             <form onSubmit={this.onSubmit} style={{ display: 'flex' }}>
@@ -46,4 +46,11 @@ class AddTodo extends Component {
     
 }
 
+// PropTypes
+AddTodo.propTypes = {
+    addTodo: PropTypes.func.isRequired, 
+}
+
 export default AddTodo;
+
+

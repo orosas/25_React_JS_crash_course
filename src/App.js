@@ -47,7 +47,10 @@ class App extends Component {
     //   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
     console.log([...this.state.todos]);
     console.log([this.state.todos]);
-    this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)]})
+
+    axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
+      .then(res => this.setState({ todos: 
+          [...this.state.todos.filter(todo => todo.id !== id)]}))
   }
 
   // Add Todo

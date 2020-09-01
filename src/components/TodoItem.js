@@ -1,3 +1,5 @@
+// Nota: Componente que muestra en la UI cada uno de los
+//         ToDo's. Llamado desde Todos.js
 import React, { Component } from 'react';
 // Nota: Prop types are a validation for propierties that 
 //     a component should have.
@@ -50,7 +52,9 @@ export class TodoItem extends Component {
 
 // PropTypes
 TodoItem.propTypes = {
-    todo: PropTypes.object.isRequired
+    todo: PropTypes.object.isRequired, 
+    markComplete: PropTypes.func.isRequired,
+    delTodo: PropTypes.func.isRequired,
 }
 
 // Nota: Estilo para botón de borrado, aplicado en render()
@@ -65,5 +69,3 @@ const btnStyle = {
 }
 
 export default TodoItem;
-
-
